@@ -18,7 +18,7 @@ public extension View {
 		font(.inter(ofSize: 12)).foregroundColor(Color(.grey100))
 	}
 	
-	private func addSectionTitle(_ title: String) -> some View {
+	func addSectionTitle(_ title: String) -> some View {
 		VStack(alignment: .leading) {
 			Text(title).sectionTitleFont()
 				.padding(.leading, sidePadding)
@@ -29,8 +29,8 @@ public extension View {
 	func addHorizontalScrollView(title: String) -> some View {
 		ScrollView(.horizontal, showsIndicators: false) {
 			self
-			.padding([.leading, .trailing], sidePadding)
-			.fixedSize()
+				.padding([.leading, .trailing], sidePadding)
+				.fixedSize()
 		}
 		.addSectionTitle(title)
 	}
