@@ -2,6 +2,11 @@ import Foundation
 import SharedUI
 
 struct ArtistViewUIModel {
+	let title: String
+	let headerImageSection: HeaderImageCellModel
+	let profileImageSection: ProfileImageCellModel
+	let followSection: SupportButtonsCellModel
+	let supportSection: SupportButtonsCellModel
 	let trackSection: CellsSectionModel<CompactCellViewModel>
 	let topSongsSection: CellsSectionModel<BigCellViewModel>
 	let albumSection: CellsSectionModel<BigCellViewModel>

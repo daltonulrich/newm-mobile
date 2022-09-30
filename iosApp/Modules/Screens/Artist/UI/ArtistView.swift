@@ -5,8 +5,7 @@ import Resolver
 
 struct ArtistView: View {
 	@StateObject private var viewModel = ArtistViewModel()
-	
-	public init() {}
+	@Environment(\.presentationMode) var presentationMode
 	
 	public var body: some View {
 		NavigationView {
@@ -19,12 +18,50 @@ struct ArtistView: View {
 				Text("Error")
 			}
 		}
-		.navigationBarTitleDisplayMode(.inline)
+		.navigationTitle("J-ROC")
+		.navigationBarBackButtonHidden()
+		.navigationBarItems(leading:
+			Button(action: {
+				self.presentationMode.wrappedValue.dismiss()
+			}) {
+				HStack {
+					Image("Back Button")
+				}
+		},
+		trailing:
+			Button(action: {
+			print("extra actions")
+		}) {
+			Image(systemName: "ellipsis")
+				.rotationEffect(Angle(degrees: 90))
+				.foregroundColor(.white)
+		})
+		.navigationAppearance(backgroundColor: .black)
 	}
 }
 
 struct ArtistView_Previews: PreviewProvider {
 	static var previews: some View {
 		return ArtistView()
+	}
+}
+
+
+struct NavAppearanceModifier: ViewModifier {
+	init(backgroundColor: UIColor) {
+		let navBarAppearance = UINavigationBarAppearance()
+		navBarAppearance.configureWithOpaqueBackground()
+		navBarAppearance.backgroundColor = backgroundColor
+		UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+	}
+	
+	func body(content: Content) -> some View {
+		content
+	}
+}
+
+extension View {
+	func navigationAppearance(backgroundColor: UIColor) -> some View {
+		self.modifier(NavAppearanceModifier(backgroundColor: backgroundColor))
 	}
 }

@@ -17,12 +17,17 @@ extension ArtistView {
 		var body: some View {
 			ScrollView {
 				VStack(spacing: 36) {
+					HeaderImageSection(uiModel.headerImageSection)
+					ProfileImageSection(uiModel.profileImageSection)
+					HStack {
+						SupportButtonsModel(uiModel.followSection)
+						SupportButtonsModel(uiModel.supportSection)
+					}
 					BigCellSection(uiModel.topSongsSection, actionHandler: actionHandler.songTapped)
 					TrackSection(uiModel.trackSection, actionHandler: actionHandler.songTapped)
 					BigCellSection(uiModel.albumSection, actionHandler: actionHandler.albumTapped)
 				}
 			}
-			
 		}
 	}
 }

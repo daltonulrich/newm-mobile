@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import Combine
 import Resolver
 import ModuleLinker
@@ -31,6 +32,11 @@ class ArtistViewModel: ObservableObject {
 }
 
 extension ArtistViewModel: ArtistViewActionHandling {
+	func followTapped(id: String) {
+		print(#function + " " + id)
+		route = .follow(id: id)
+	}
+	
 	func albumTapped(id: String) {
 		print(#function + " " + id)
 		route = .album(id: id)

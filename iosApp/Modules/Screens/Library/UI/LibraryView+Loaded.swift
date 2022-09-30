@@ -18,11 +18,12 @@ extension LibraryView {
             ScrollView {
                 titleSection
                 VStack(spacing: 36) {
-                    BigCellSection(uiModel.recentlyPlayedSection, actionHandler: actionHandler.songTapped)
+					BigCellSection(uiModel.recentlyPlayedSection, actionHandler: actionHandler.playlistTapped)
                     PlaylistsSection(uiModel.yourPlaylistsSection, actionHandler: actionHandler.playlistTapped)
-                    BigCellSection(uiModel.likedSongsSection, actionHandler: actionHandler.songTapped)
+                    BigCellSection(uiModel.likedSongsSection, actionHandler: actionHandler.likedSongsTapped(id:))
                 } 
             }
+			.links(Links(route: $route))
         }
         
         private var titleSection: some View {
