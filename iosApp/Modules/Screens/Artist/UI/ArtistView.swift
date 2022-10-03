@@ -20,23 +20,27 @@ struct ArtistView: View {
 		}
 		.navigationTitle("J-ROC")
 		.navigationBarBackButtonHidden()
-		.navigationBarItems(leading:
-			Button(action: {
-				self.presentationMode.wrappedValue.dismiss()
-			}) {
-				HStack {
-					Image("Back Button")
+		.toolbar {
+			ToolbarItem(placement: .navigationBarLeading) {
+				Button(action: {
+					self.presentationMode.wrappedValue.dismiss()
+				}) {
+					HStack {
+						Image("Back Button")
+					}
 				}
-		},
-		trailing:
-			Button(action: {
-			print("extra actions")
-		}) {
-			Image(systemName: "ellipsis")
-				.rotationEffect(Angle(degrees: 90))
-				.foregroundColor(.white)
-		})
-		.navigationAppearance(backgroundColor: .black)
+			}
+			ToolbarItem(placement: .navigationBarTrailing) {
+				Button(action: {
+					print("extra actions")
+				}) {
+					Image(systemName: "ellipsis")
+						.rotationEffect(Angle(degrees: 90))
+						.foregroundColor(.white)
+				}
+			}
+		}
+		.navigationAppearance(backgroundColor: .blue)
 	}
 }
 
@@ -53,6 +57,7 @@ struct NavAppearanceModifier: ViewModifier {
 		navBarAppearance.configureWithOpaqueBackground()
 		navBarAppearance.backgroundColor = backgroundColor
 		UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+		UINavigationBar.appearance().isTranslucent = false
 	}
 	
 	func body(content: Content) -> some View {

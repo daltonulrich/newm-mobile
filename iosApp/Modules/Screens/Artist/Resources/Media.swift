@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import SharedUI
 
 enum SupFolIcon {
 	case follow
@@ -7,9 +8,8 @@ enum SupFolIcon {
 	
 	var image: Image {
 		switch self {
-		case .follow: return Image("Stars Icon")
-		case .support: return Image("Stars Icon")
-			//TODO: support should be heart.circle.fill, asset not added
+		case .follow: return Image("Stars Icon", bundle: Bundle(for: SharedUIModule.self))
+		case .support: return Image("Heart Plus", bundle: Bundle(for: SharedUIModule.self))
 		}
 	}
 }
