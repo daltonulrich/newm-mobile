@@ -296,6 +296,7 @@
 		9A02BBC528E636A6000D46C9 /* HeaderImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02BBC428E636A6000D46C9 /* HeaderImageCellModel.swift */; };
 		9A02BBC728E63B00000D46C9 /* ProfileImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02BBC628E63B00000D46C9 /* ProfileImageCellModel.swift */; };
 		9A02BBCA28E90202000D46C9 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02BBC928E90202000D46C9 /* Media.swift */; };
+		9A07682C291EAD3D00CA8556 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A07682B291EAD3D00CA8556 /* Media.xcassets */; };
 		9A63E5D628E53E7300F3AB49 /* ProfileImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A63E5D528E53E7300F3AB49 /* ProfileImageSection.swift */; };
 		9A830D6128C16197006348D1 /* ArtistRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A830D6028C16197006348D1 /* ArtistRoute.swift */; };
 		9A830D6328C2BF9F006348D1 /* TrackSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A830D6228C2BF9F006348D1 /* TrackSection.swift */; };
@@ -304,7 +305,6 @@
 		9A830D6828C4085D006348D1 /* shared.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4CC6A28BD76340046D496 /* shared.xcframework */; };
 		9A830D6928C4085D006348D1 /* shared.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC4CC6A28BD76340046D496 /* shared.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A95738028C96AFE005BC60F /* LibraryView+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A95737F28C96AFE005BC60F /* LibraryView+Navigation.swift */; };
-		9A95738728CA6E69005BC60F /* LikedSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A95738628CA6E69005BC60F /* LikedSongs.swift */; };
 		9A95738928CA75AA005BC60F /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 9A95738828CA75AA005BC60F /* SwiftUINavigation */; };
 		9A95738B28CA75C7005BC60F /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 9A95738A28CA75C7005BC60F /* CasePaths */; };
 		9A95738C28CA78A4005BC60F /* Artist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7618FD5E28164D99007573B4 /* Artist.framework */; };
@@ -1227,11 +1227,11 @@
 		9A02BBC428E636A6000D46C9 /* HeaderImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageCellModel.swift; sourceTree = "<group>"; };
 		9A02BBC628E63B00000D46C9 /* ProfileImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageCellModel.swift; sourceTree = "<group>"; };
 		9A02BBC928E90202000D46C9 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		9A07682B291EAD3D00CA8556 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		9A63E5D528E53E7300F3AB49 /* ProfileImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSection.swift; sourceTree = "<group>"; };
 		9A830D6028C16197006348D1 /* ArtistRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRoute.swift; sourceTree = "<group>"; };
 		9A830D6228C2BF9F006348D1 /* TrackSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSection.swift; sourceTree = "<group>"; };
 		9A95737F28C96AFE005BC60F /* LibraryView+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LibraryView+Navigation.swift"; sourceTree = "<group>"; };
-		9A95738628CA6E69005BC60F /* LikedSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedSongs.swift; sourceTree = "<group>"; };
 		9A98C65428D915A000475132 /* HeaderImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageSection.swift; sourceTree = "<group>"; };
 		9AA019EE28BFFE5900D3FECE /* UseCaseInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseInterfaces.swift; sourceTree = "<group>"; };
 		9AA019F128BFFEC800D3FECE /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -1625,7 +1625,6 @@
 				760C2C7428165F450030ACF4 /* SongPlaying.swift */,
 				760C2C7C281660F70030ACF4 /* Tips.swift */,
 				7618FCC028164BB5007573B4 /* Wallet.swift */,
-				9A95738628CA6E69005BC60F /* LikedSongs.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2291,6 +2290,7 @@
 			isa = PBXGroup;
 			children = (
 				9ABD71D628D3CD8F00B9295E /* Media.swift */,
+				9A07682B291EAD3D00CA8556 /* Media.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -3168,6 +3168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A07682C291EAD3D00CA8556 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3571,7 +3572,6 @@
 				7618FCC328164BB5007573B4 /* Home.swift in Sources */,
 				7618FCC528164BB5007573B4 /* SharedUI.swift in Sources */,
 				7618FCC228164BB5007573B4 /* ModuleProtocol.swift in Sources */,
-				9A95738728CA6E69005BC60F /* LikedSongs.swift in Sources */,
 				760C2C7528165F450030ACF4 /* SongPlaying.swift in Sources */,
 				76DC3A1928167276004D5021 /* UIImage+Extensions.swift in Sources */,
 				760C2C7328165DE80030ACF4 /* SwiftUIView+Erased.swift in Sources */,
@@ -4037,7 +4037,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4099,7 +4099,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4127,7 +4127,7 @@
 					"\"$(SRCROOT)/Modules\"/**",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4160,7 +4160,7 @@
 					"\"$(SRCROOT)/Modules\"/**",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

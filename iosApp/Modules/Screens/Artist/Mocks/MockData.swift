@@ -13,7 +13,7 @@ class MockArtistViewUIModelProviding: ArtistViewUIModelProviding {
 	
 	static var mockUIModel: ArtistViewUIModel {
 		ArtistViewUIModel(
-			title: "",
+			title: "J-ROC",
 			headerImageSection: HeaderImageCellModel(headerImage: "bowie"),
 			profileImageSection: ProfileImageCellModel(profileImage: "bowie"),
 			followSection: SupportButtonsCellModel(title: "Follow", icon: .follow),
