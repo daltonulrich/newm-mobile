@@ -1,18 +1,18 @@
 import Foundation
+import UIKit
 import Combine
 import Resolver
 import ModuleLinker
 import shared
 import Utilities
 import SharedUI
-import Artist
 
-class LibraryViewModel: ObservableObject {
-	@MainActor @Published var state: ViewState<(LibraryViewUIModel, LibraryViewActionHandling)> = .loading
-	@Published var route: LibraryRoute?
+class ArtistViewModel: ObservableObject {
+	@MainActor @Published var state: ViewState<(ArtistViewUIModel, ArtistViewActionHandling)> = .loading
+	@Published var route: ArtistRoute?
 	
-	@Injected private var uiModelProvider: LibraryViewUIModelProviding
-	
+	@Injected private var uiModelProvider: ArtistViewUIModelProviding
+
 	init() {
 		Task {
 			await refresh()
@@ -29,21 +29,20 @@ class LibraryViewModel: ObservableObject {
 			state = .error(error)
 		}
 	}
-	
 }
 
-extension LibraryViewModel: LibraryViewActionHandling {
-	func playlistTapped(id: String) {
+extension ArtistViewModel: ArtistViewActionHandling {
+	func albumTapped(id: String) {
 		print(#function + " " + id)
-		route = .playlist(id: id)
-	}
-	
-	func artistTapped(id: String) {
-		print(#function + " " + id)
-		route = .artist(id: id)
+		route = .album(id: id)
 	}
 	
 	func songTapped(id: String) {
+		print(#function + " " + id)
+		route = .songPlaying(id: id)
+	}
+	
+	func songPlayingTapped(id: String) {
 		print(#function + " " + id)
 		route = .songPlaying(id: id)
 	}
